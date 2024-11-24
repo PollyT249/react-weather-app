@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import WeatherInfo from "./WeatherInfo.js";
 
 import axios from "axios";
@@ -9,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -17,8 +19,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
-      iconUrl:
-        "https://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-day.png",
+      icon: response.data.weather[0].icon,
     });
   }
 
