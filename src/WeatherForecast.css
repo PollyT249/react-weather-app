@@ -1,5 +1,23 @@
 .WeatherForecast {
   text-align: center;
+  padding: 30px 0;
+}
+
+.WeatherForecast-container {
+  border: 1px solid #e9b9b9;
+  padding: 15px 5px;
+  border-radius: 10px;
+}
+
+.WeatherForecast-container:hover {
+  cursor: pointer;
+  background-color: #eae5f7;
+}
+
+/* background-color: #e9e2d0; */
+
+.WeatherForecast-day {
+  font-size: 24px;
 }
 
 .WeatherForecast-temperature-max {
